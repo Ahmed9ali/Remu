@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Roboto Flex', system-ui, sans-serif;
+
+    /* Material 3 Expressive Shape Tokens */
+    --md-shape-none: 0px;
+    --md-shape-xs: 4px;
+    --md-shape-s: 8px;
+    --md-shape-m: 16px;
+    --md-shape-l: 24px;
+    --md-shape-xl: 32px;
+    --md-shape-full: 9999px;
+
+    /* Spring Motion Timing Tokens */
+    --md-motion-spring-spatial-damping: 24;
+    --md-motion-spring-spatial-stiffness: 280;
+    --md-motion-spring-effects-damping: 20;
+    --md-motion-spring-effects-stiffness: 350;
+
+    /* Theme colors (AMOLED black defaults) */
+    --md-sys-color-background: #000000;
+    --md-sys-color-on-background: #E2E8F0;
+    --md-sys-color-surface: #000000;
+    --md-sys-color-surface-dim: #050505;
+    --md-sys-color-surface-bright: #1E222A;
+    --md-sys-color-surface-container-lowest: #000000;
+    --md-sys-color-surface-container-low: #0A0D14;
+    --md-sys-color-surface-container: #10141D;
+    --md-sys-color-surface-container-high: #171D2A;
+    --md-sys-color-surface-container-highest: #202738;
+    --md-sys-color-on-surface: #E2E8F0;
+    --md-sys-color-on-surface-variant: #94A3B8;
+    --md-sys-color-outline: #475569;
+    --md-sys-color-outline-variant: #334155;
+    
+    --md-sys-color-primary: #38BDF8;
+    --md-sys-color-on-primary: #002B49;
+    --md-sys-color-primary-container: #07466D;
+    --md-sys-color-on-primary-container: #BAE6FD;
+
+    --md-sys-color-secondary: #34D399;
+    --md-sys-color-on-secondary: #003822;
+    --md-sys-color-secondary-container: #065F46;
+    --md-sys-color-on-secondary-container: #A7F3D0;
+
+    --md-sys-color-tertiary: #C084FC;
+    --md-sys-color-on-tertiary: #3B0764;
+    --md-sys-color-tertiary-container: #6B21A8;
+    --md-sys-color-on-tertiary-container: #F3E8FF;
+
+    --md-sys-color-error: #F87171;
+    --md-sys-color-on-error: #450A0A;
+    --md-sys-color-error-container: #7F1D1D;
+    --md-sys-color-on-error-container: #FECACA;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  overflow: hidden;
+  height: 100dvh;
+  width: 100vw;
+  user-select: none;
+}
+
+/* xterm terminal styling overrides */
+.xterm {
+  height: 100% !important;
+  width: 100% !important;
+  padding: 8px 12px;
+  background-color: #000000 !important;
+}
+
+.xterm-viewport {
+  background-color: #000000 !important;
+}
+
+.xterm-viewport::-webkit-scrollbar {
+  width: 4px;
+}
+.xterm-viewport::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}
+
+/* Safe area insets for mobile edge-to-edge */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}

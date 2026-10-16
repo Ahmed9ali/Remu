@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer Terminal Window Frame -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M28,29 h52 c3.31,0 6,2.69 6,6 v38 c0,3.31 -2.69,6 -6,6 h-52 c-3.31,0 -6,-2.69 -6,-6 v-38 c0,-3.31 2.69,-6 6,-6 z" />
+
+    <!-- Terminal Title Bar Line -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M22,39 h64 v2 h-64 z" />
+
+    <!-- Window Control Dots -->
+    <path
+        android:fillColor="#EF4444"
+        android:pathData="M28,34 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M35,34 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M42,34 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Command Prompt '>' -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M32,49 L42,56 L32,63 L34.5,66 L47,56 L34.5,46 z" />
+
+    <!-- Underscore Cursor '_' with neon green accent -->
+    <path
+        android:fillColor="#4ADE80"
+        android:pathData="M52,63 h16 v3 h-16 z" />
+
+    <!-- Code Accent Braces '{' and '}' on bottom/right -->
+    <path
+        android:fillColor="#A78BFA"
+        android:pathData="M74,48 c-1.5,0 -2.5,0.8 -2.5,2 v2 c0,1.2 -0.8,2 -2,2 c1.2,0 2,0.8 2,2 v2 c0,1.2 1,2 2.5,2 v-1.5 c-0.8,0 -1,-0.5 -1,-1.2 v-2 c0,-1 -0.7,-1.8 -1.7,-1.8 c1,0 1.7,-0.8 1.7,-1.8 v-2 c0,-0.7 0.2,-1.2 1,-1.2 z" />
+</vector>

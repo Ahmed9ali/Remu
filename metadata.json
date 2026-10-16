@@ -1,0 +1,6 @@
+{
+  "name": "Termux Code",
+  "description": "A Termux-style terminal that grows into a lightweight VS Code-style editor with M3 Expressive UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
