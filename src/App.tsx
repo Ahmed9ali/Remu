@@ -22,9 +22,12 @@ export function App() {
 
   // Initialize VFS on launch
   useEffect(() => {
-    vfs.init().then(() => {
-      setFsReady(true);
-    });
+    vfs.init()
+      .then(() => setFsReady(true))
+      .catch((err) => {
+        console.error("VFS initialization error:", err);
+        setFsReady(true);
+      });
 
     const handleAndroidBack = () => {
       if (editorState.open) {

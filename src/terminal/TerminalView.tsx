@@ -377,11 +377,22 @@ export const TerminalView: React.FC<TerminalViewProps> = ({
       term.write(shellEngine.getPrompt() + currentLineRef.current);
     };
 
+    const resizeObserver = new ResizeObserver(() => {
+      try {
+        fitAddon.fit();
+      } catch (_) {}
+    });
+
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
     window.addEventListener('resize', handleResize);
     window.addEventListener('termux-run-cmd', handleRunCommand);
     window.addEventListener('termux-clear', handleClear);
 
     return () => {
+      resizeObserver.disconnect();
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('termux-run-cmd', handleRunCommand);
       window.removeEventListener('termux-clear', handleClear);
